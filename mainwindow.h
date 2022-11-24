@@ -6,7 +6,6 @@
 #include <QPoint>
 #include <QPair>
 #include <QPainter>
-#include <QDebug>
 #include <QtMath>
 #include <QFile>
 #include <QTextStream>

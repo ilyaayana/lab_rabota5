@@ -78,6 +78,7 @@ void MainWindow::paintEvent(QPaintEvent *){
         p.drawLine(pix.width()*(0.5+stp*segment.first.x()),pix.height()*(0.5-stp*segment.first.y()),pix.width()*(0.5+stp*segment.second.x()),pix.height()*(0.5-stp*segment.second.y()));
     for(int i = 1; i<polygon.size();i++)
         p.drawLine(pix.width()*(0.5+stp*polygon[i-1].x()),pix.height()*(0.5-stp*polygon[i-1].y()),pix.width()*(0.5+stp*polygon[i].x()),pix.height()*(0.5-stp*polygon[i].y()));
+
     //draw clipped segments and polygon
     p.setPen(QPen(Qt::black,3));
     for(auto otrezok:clipSegments[0])
