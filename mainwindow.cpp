@@ -67,6 +67,11 @@ void MainWindow::paintEvent(QPaintEvent *){
           p.drawText(pix.width()/2.10,pix.height()*(0.955-step*i),QString::number(scale/10*(i-10)));
 
     }
+    QFont font = p.font();
+    font.setPixelSize(36);
+    p.setFont(font);
+    p.drawText(pix.width()*0.515,pix.height()*0.06,"y");
+    p.drawText(pix.width()*0.94,pix.height()*0.515,"x");
 
     QVector<QVector<QPair<QPointF,QPointF>>> clipSegments = cutSegments(segments);
     QVector<QPointF> clipPolygon = cutPolygon(polygon);
